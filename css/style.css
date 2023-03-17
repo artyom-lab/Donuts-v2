@@ -514,21 +514,10 @@ input[type=checkbox], input[type=radio] {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 35px;
+  bottom: 12px;
   margin: 0 auto;
-  transition: 0.3s;
-  animation: 2s infinite;
-  animation-name: scroll-1; }
-  .scroll-to:hover {
-    animation: inherit;
-    opacity: 1; }
+  transition: 0.3s; }
 
-@keyframes scroll-1 {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    transform: translateY(10px); } }
 .box-gaz img {
   width: 200px; }
 @media (min-width: 768px) {
@@ -588,6 +577,12 @@ ul {
   background-size: cover;
   background-position: top center; }
 
+.bg-img-blue, .bg-img-blue-2 {
+  background-image: url(../img/bg-blue.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center; }
+
 .bg-img-blue {
   padding: 40px 0; }
   @media (max-width: 767.98px) {
@@ -595,14 +590,13 @@ ul {
       padding: 28px 0; } }
 
 .bg-img-blue-2 {
-  padding: 55px 0;
-  position: relative; }
+  padding: 55px 0; }
   @media (max-width: 767.98px) {
     .bg-img-blue-2 {
       padding: 20px 0; } }
 
 .to-up {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   width: 40px;

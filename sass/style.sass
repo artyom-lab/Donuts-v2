@@ -500,23 +500,11 @@ input
 	position: absolute
 	left: 0
 	right: 0
-	bottom: 35px
+	bottom: 12px
 	margin: 0 auto
 	transition: $transition
-	animation: 2s infinite
-	animation-name: scroll-1
-	&:hover 
-		animation: inherit
-		opacity: 1
 
-@keyframes scroll-1
-	0%
-		opacity: 1
-	100%
-		opacity: 0
-		transform: translateY(10px)
-
-// GAZ
+// ABOUT
 
 .box-gaz
 	img 
@@ -576,6 +564,12 @@ ul
 	background-size: cover
 	background-position: top center
 
+.bg-img-blue, .bg-img-blue-2
+	background-image: url(../img/bg-blue.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top center
+
 .bg-img-blue
 	padding: 40px 0
 	@media (max-width: 767.98px)
@@ -583,12 +577,11 @@ ul
 
 .bg-img-blue-2
 	padding: 55px 0
-	position: relative
 	@media (max-width: 767.98px)
 		padding: 20px 0
 
 .to-up 
-	position: absolute
+	position: fixed
 	bottom: 20px
 	right: 20px
 	width: 40px
