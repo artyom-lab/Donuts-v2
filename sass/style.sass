@@ -120,6 +120,12 @@ a
 		font-size: 20px
 		@media (max-width: 767.98px)
 			font-size: 14px
+	&.more-projects
+		font-size: 18px
+		font-weight: 500
+		color: $color-progress
+		@media (max-width: 575.98px)
+			font-size: 14px
 	&.back
 		color: $color-dark-blue
 		display: inline-block
@@ -208,12 +214,9 @@ a
 		font-size: 20px
 
 .h1 
-	font-family: 'Nunito', sans-serif
-	color: $color-white
+	font-size: 48px
 	@media (max-width: 767.98px)
-		font-size: 28px
-	@media (max-width: 575.98px)
-		font-size: 16px
+		font-size: 32px !important
 
 .h2, h2
 	font-weight: 600
@@ -235,6 +238,12 @@ a
 		img 
 			width: 12px
 
+.h3
+	font-size: 32px
+	color: $color-dark-blue
+	@media (max-width: 575.98px)
+		font-size: 24px
+
 .h4, h4
 	font-weight: 600
 	font-size: 24px
@@ -243,6 +252,23 @@ a
 		font-size: 18px
 	@media (max-width: 575.98px)
 		font-size: 16px
+
+.h4
+	font-size: 24px
+	font-weight: 500
+	font-family: 'DM Sans', sans-serif
+	color: $color-dark-blue
+	@media (max-width: 767.98px)
+		font-size: 20px
+	@media (max-width: 575.98px)
+		font-size: 18px
+
+.h5, h5
+	font-weight: 500
+	font-size: 32px
+	font-family: 'DM Sans', sans-serif
+	@media (max-width: 767.98px)
+		font-size: 18px
 
 .title-help
 	font-weight: bold
@@ -310,6 +336,10 @@ a
 		min-height: calc(100vh - 30px)
 		display: flex
 		flex-direction: column
+	> .container-landing
+		min-height: calc(100vh - 130px)
+		@media (max-width: 1199.98px)
+			min-height: auto
 
 .box-supported
 	display: block
@@ -444,14 +474,14 @@ input
 	filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.12))
 	background: $color-orange
 	border-radius: 100px
-	padding: 12px
+	padding: 12px 32px
 	color: $color-white
 	font-size: 20px
 	transition: $transition
 	font-weight: bold
 	font-family: 'Montserrat', sans-serif
 	@media (max-width: 575.98px)
-		font-size: 18px
+		font-size: 18px !important
 	&:hover
 		opacity: .9
 		color: $color-white
@@ -461,6 +491,18 @@ input
 
 .btn-save
 	background: $color-main
+
+.btn-explore
+	font-size: 24px
+	font-weight: 500
+	font-family: 'DM Sans', sans-serif
+
+.btn-outline-orange
+	background: $color-white
+	color: $color-orange
+	border: 1px solid $color-orange
+	&:hover
+		color: $color-orange
 
 .box-info
 	margin-bottom: 12px
@@ -494,13 +536,26 @@ input
 		@media (max-width: 575.98px)
 			font-size: 14px
 
+.progress-box-small
+	.progress
+		height: 8px
+		margin: 2px 0
+	.progress-content
+		font-size: 14px
+		@media (max-width: 575.98px)
+			font-size: 12px
+	.fz-12
+		font-size: 12px
+		@media (max-width: 575.98px)
+			font-size: 10px
+
 .scroll-to
 	width: 34px
 	height: 34px
 	position: absolute
 	left: 0
 	right: 0
-	bottom: 12px
+	bottom: 30px
 	margin: 0 auto
 	transition: $transition
 
@@ -564,19 +619,20 @@ ul
 	background-size: cover
 	background-position: top center
 
-.bg-img-blue, .bg-img-blue-2
-	background-image: url(../img/bg-blue.jpg)
+.bg-img-blue, .bg-img-blue-2, .bg-donate
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: top center
 
 .bg-img-blue
 	padding: 40px 0
+	background-image: url(../img/bg-blue.jpg)
 	@media (max-width: 767.98px)
 		padding: 28px 0
 
 .bg-img-blue-2
 	padding: 55px 0
+	background-image: url(../img/bg-blue.jpg)
 	@media (max-width: 767.98px)
 		padding: 20px 0
 
@@ -588,6 +644,7 @@ ul
 	height: 40px
 	transition: $transition
 	z-index: 22
+	display: none
 	cursor: pointer
 	@media (max-width: 1199.98px)
 		right: 15px
@@ -744,6 +801,7 @@ ul
 		.inactive
 			color: #D9D9D9
 			font-weight: normal
+
 
 .btn-paypal
 	filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.12))
@@ -988,3 +1046,179 @@ ul
 .glide-up-first, .glide-down-first, .glide-up-last, .glide-down-last 
 	opacity: 0 !important
 
+// LANDING PAGE
+
+.navbar
+	padding-top: 18px
+	padding-bottom: 18px
+	@media (max-width: 767.98px)
+		padding-top: 10px
+		padding-bottom: 10px
+	.navbar-brand
+		font-weight: bold 
+		font-size: 36px
+		color: $color-main
+		@media (max-width: 767.98px)
+			font-size: 24px
+		@media (max-width: 575.98px)
+			font-size: 18px
+		&:hover
+			color: $color-main
+	.container
+			padding-left: 48px
+			padding-right: 48px
+			@media (max-width: 991.98px)
+				padding-left: 15px
+				padding-right: 15px
+			@media (max-width: 575.98px)
+				padding-left: 0
+				padding-right: 0
+	.navbar-nav
+		.nav-item
+			@media (min-width: 992px)
+				margin: 0 29px
+			.nav-link
+				font-size: 24px
+				font-weight: 500
+				color: $color-main
+				@media (max-width: 991.98px)
+					font-size: 20px
+				@media (max-width: 575.98px)
+					font-size: 16px
+
+.navbar-toggler
+	display: inline-block
+	cursor: pointer
+	transition: none
+	padding: 0
+	border: 0
+	&:hover 
+		opacity: .6
+	&:before, span, &:after
+		width: 26px
+		@media (max-width: 575.98px)
+			width: 18px
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 5px
+		@media (max-width: 575.98px)
+			margin-top: 3px
+	span, &:before, &:after
+		display: block
+		transition: $transition
+		transform-origin: right center
+		border-top: 2px solid $color-dark-blue
+		margin-left: auto
+
+.button-box
+	@media (max-width: 991.98px)
+		margin-top: 330px
+
+.banner-bg
+	position: absolute
+	max-width: initial
+	z-index: -1
+
+.banner-bg-1
+	right: 0
+	top: 50%
+	transform: translateY(-50%)
+	@media (max-width: 991.98px)
+		display: none
+
+.banner-bg-2
+	right: 0
+	bottom: 300px
+	@media (min-width: 992px)
+		display: none
+
+.section-white
+	padding: 120px 0
+	color: $color-dark-blue
+	@media (max-width: 767.98px)
+		padding: 42px 0
+
+.bg-img-card
+	background-size: cover
+	background-position: center center
+	height: auto
+	min-height: 140px
+	@media (min-width: 992px)
+		min-height: 220px
+
+.card-funding
+	background: $color-white
+	border-radius: 30px
+	overflow: hidden
+	display: flex
+	border: 1px solid $color-progress
+	flex-direction: column 
+	height: 100%
+	.card-content
+		padding: 20px 30px
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+		@media (max-width: 767.98px)
+			padding: 12px 16px
+	.finding
+		font-weight: 600
+		font-size: 14px
+		color: $color-progress
+		font-family: 'Montserrat', sans-serif
+	.title
+		font-family: 'Montserrat', sans-serif
+		font-weight: 600
+		font-size: 16px
+		color: #16697A
+	.card-comment
+		color: $color-footer
+		font-size: 14px
+		line-height: 1.4
+	.img-wrap
+		@media (max-width: 767.98px)
+			margin: 16px 16px 0
+			border-radius: 10px
+
+
+.pill-proven
+	text-transform: uppercase
+	background: $color-orange
+	color: $color-white
+	display: inline-block
+	border-radius: 5px
+	padding: 2px 12px
+	font-size: 8px
+	font-weight: 600
+	font-family: 'Montserrat', sans-serif
+
+.bg-donate
+	padding: 80px 0
+	background-image: url(../img/bg-blue-2.jpg)
+	@media (max-width: 767.98px)
+		padding: 50px 0
+	@media (max-width: 575.98px)
+		background-image: url(../img/bg-blue-2-small.jpg)
+
+.donate-content
+	font-size: 18px
+	color: $color-dark-blue
+	@media (max-width: 767.98px)
+		font-size: 16px
+	@media (max-width: 575.98px)
+		font-size: 14px
+		
+.tools-content
+	font-size: 20px
+	color: $color-dark-blue
+	@media (max-width: 767.98px)
+		font-size: 16px
+	@media (max-width: 575.98px)
+		font-size: 14px
+
+.img-tool
+	@media (max-width: 1199.98px)
+		max-width: 180px
+	@media (max-width: 991.98px)
+		max-width: 125px
