@@ -162,6 +162,13 @@ a
 		padding-left: 10px
 		padding-right: 10px
 
+.row-12
+	margin-left: -12px
+	margin-right: -12px
+	> [class*='col']
+		padding-left: 12px
+		padding-right: 12px
+
 .row-20
 	@media (min-width: 1200px)
 		margin-left: -20px
@@ -241,6 +248,8 @@ a
 .h3
 	font-size: 32px
 	color: $color-dark-blue
+	@media (max-width: 767.98px)
+		font-size: 26px
 	@media (max-width: 575.98px)
 		font-size: 24px
 
@@ -492,6 +501,11 @@ input
 .btn-save
 	background: $color-main
 
+.btn-submit
+	padding: 12px 72px
+	@media (max-width: 575.98px)
+		width: 100%
+
 .btn-explore
 	font-size: 24px
 	font-weight: 500
@@ -619,7 +633,7 @@ ul
 	background-size: cover
 	background-position: top center
 
-.bg-img-blue, .bg-img-blue-2, .bg-donate
+.bg-img-blue, .bg-img-blue-2
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: top center
@@ -647,7 +661,7 @@ ul
 	display: none
 	cursor: pointer
 	@media (max-width: 1199.98px)
-		right: 15px
+		right: 10px
 		bottom: 15px
 	&:hover 
 		opacity: .8
@@ -691,6 +705,9 @@ ul
 
 .footer 
 	padding: 40px 0
+	margin-top: auto
+	position: relative
+	z-index: 1
 	background-color: $color-footer
 	font-family: 'Montserrat', sans-serif
 	text-align: center
@@ -801,7 +818,6 @@ ul
 		.inactive
 			color: #D9D9D9
 			font-weight: normal
-
 
 .btn-paypal
 	filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.12))
@@ -1085,6 +1101,11 @@ ul
 					font-size: 20px
 				@media (max-width: 575.98px)
 					font-size: 16px
+					padding: 16px 0
+					text-align: center
+					background: $color-dark-blue
+					color: $color-white
+					border-bottom: 1px solid $color-white
 
 .navbar-toggler
 	display: inline-block
@@ -1136,7 +1157,7 @@ ul
 .section-white
 	padding: 120px 0
 	color: $color-dark-blue
-	@media (max-width: 767.98px)
+	@media (max-width: 1199.98px)
 		padding: 42px 0
 
 .bg-img-card
@@ -1181,7 +1202,6 @@ ul
 			margin: 16px 16px 0
 			border-radius: 10px
 
-
 .pill-proven
 	text-transform: uppercase
 	background: $color-orange
@@ -1196,6 +1216,9 @@ ul
 .bg-donate
 	padding: 80px 0
 	background-image: url(../img/bg-blue-2.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top center
 	@media (max-width: 767.98px)
 		padding: 50px 0
 	@media (max-width: 575.98px)
@@ -1217,8 +1240,185 @@ ul
 	@media (max-width: 575.98px)
 		font-size: 14px
 
-.img-tool
+.tool-box
+	@media (min-width: 768px)
+		min-height: 112px
+	@media (min-width: 992px)
+		min-height: 161px
+	@media (min-width: 1200px)
+		min-height: 218px
+	.img-tool
+		@media (max-width: 1199.98px)
+			max-width: 180px
+		@media (max-width: 991.98px)
+			max-width: 125px
+
+.bg-FAQ
+	padding: 80px 0
+	background-image: url(../img/bg-blue.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top center
+	position: relative
+	overflow: hidden
+	@media (max-width: 767.98px)
+		padding: 40px 0
+	.ellipse
+		position: absolute
+		z-index: 1
+		@media (max-width: 1199.98px)
+			display: none
+		&.ellipse-1
+			top: 48px 
+			left: 112px
+		&.ellipse-2
+			top: 48px 
+			right: 63px
+		&.ellipse-3
+			top: 619px 
+			left: 0	
+		&.ellipse-4
+			top: 694px 
+			right: 0
+
+.accordion-FAQ
+	position: relative
+	z-index: 2
+	.card
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05)
+		border: 0
+		border-radius: 32px
+		@media (max-width: 767.98px)
+			border-radius: 16px
+		.card-header
+			display: flex
+			padding: 30px 32px
+			background: $color-white
+			border-radius: 32px
+			line-height: 1.2
+			border: 0
+			font-weight: bold
+			color: $color-black
+			font-size: 24px
+			min-height: 120px
+			@media (max-width: 767.98px)
+				padding: 16px 24px
+				font-size: 16px
+				border-radius: 16px
+				min-height: 75px
+				img
+					width: 32px
+		.card-body 
+			padding: 0 32px 30px
+			color: $color-black
+			@media (max-width: 767.98px)
+				padding: 0 24px 16px
+				font-size: 14px
+
+.form-contact
+	@media (min-width: 992px)
+		padding: 80px 0
+
+.email-box
+	background: $color-progress
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05)
+	border-radius: 30px
+	display: inline-block
+	padding: 20px
+	text-align: center
+	a 
+		color: $color-dark-blue
+
+.box-contact
+	padding: 20px
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05)
+	border-radius: 30px
+	.form-group
+		margin-bottom: 30px
+		.contacts-label
+			font-weight: bold
+		.form-control
+			height: 40px
+			font-size: 16px
+			transition: $transition
+			border-radius: 30px
+			color: $color-gray-2
+			padding: 8px 20px
+			border: 1px solid #F9F9F9
+			background: #F9F9F9
+			&::-webkit-input-placeholder
+				color: $color-gray-2
+			&::-moz-placeholder
+				color: $color-gray-2
+			&:-ms-input-placeholder
+				color: $color-gray-2
+			@media (max-width: 767.98px)
+				font-size: 14px
+			&:focus
+				box-shadow: none
+				background: $color-white
+		.form-textarea
+			resize: none
+			min-height: 144px
+			padding: 20px
+
+.bg-signup
+	padding: 16px 40px 180px
+	background-image: url(../img/bg-signup.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: bottom center
+	margin-bottom: -5%
+	position: relative
+	z-index: 2
+	pointer-events: none
 	@media (max-width: 1199.98px)
-		max-width: 180px
-	@media (max-width: 991.98px)
-		max-width: 125px
+		background-image: url(../img/bg-blue.jpg)
+		margin-bottom: 0
+		padding: 16px 40px 50px
+	@media (max-width: 575.98px)
+		padding: 24px 8px
+
+.box-signup
+	pointer-events: initial
+	.title
+		font-size: 48px
+		font-weight: 500
+		color: $color-main
+		@media (max-width: 1199.98px)
+			font-size: 32px
+		@media (max-width: 767.98px)
+			font-size: 26px
+		@media (max-width: 575.98px)
+			font-size: 16px
+	.input-signup
+		height: 62px
+		font-size: 24px
+		transition: $transition
+		border-radius: 30px
+		color: $color-progress
+		padding: 18px 35px
+		border: 0
+		background: $color-white
+		&::-webkit-input-placeholder
+			color: $color-progress
+		&::-moz-placeholder
+			color: $color-progress
+		&:-ms-input-placeholder
+			color: $color-progress
+		@media (max-width: 991.98px)
+			font-size: 20px
+			height: 44px
+			padding: 8px 24px
+		@media (max-width: 575.98px)
+			font-size: 14px
+			height: 34px
+		&:focus
+			box-shadow: none
+	.btn-explore
+		@media (max-width: 991.98px)
+			font-size: 20px
+			padding: 6px 32px
+		@media (max-width: 575.98px)
+			font-size: 14px !important
+			padding: 5.5px 24px
