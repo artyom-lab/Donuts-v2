@@ -594,6 +594,9 @@ input[type=checkbox], input[type=radio] {
   bottom: 30px;
   margin: 0 auto;
   transition: 0.3s; }
+  @media (max-width: 1199.98px) {
+    .scroll-to {
+      display: none; } }
 
 .box-gaz img {
   width: 200px; }
@@ -1251,7 +1254,7 @@ ul {
 
 .banner-bg-2 {
   right: 0;
-  bottom: 300px; }
+  bottom: 252px; }
   @media (min-width: 992px) {
     .banner-bg-2 {
       display: none; } }
