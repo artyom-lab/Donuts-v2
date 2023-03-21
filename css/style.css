@@ -541,7 +541,7 @@ input[type=checkbox], input[type=radio] {
   color: #003F66; }
   @media (max-width: 575.98px) {
     .box-info img {
-      width: 24px; } }
+      width: 30px; } }
   .box-info .number {
     font-size: 24px;
     font-weight: bold;
