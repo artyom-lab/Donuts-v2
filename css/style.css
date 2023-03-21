@@ -1476,7 +1476,7 @@ ul {
           font-size: 14px; } }
       .box-contact .form-group .form-control:focus {
         box-shadow: none;
-        background: #FFF; }
+        background: #F2F2F2; }
     .box-contact .form-group .form-textarea {
       resize: none;
       min-height: 144px;
