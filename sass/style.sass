@@ -970,27 +970,34 @@ ul
 // SLIDER
 
 .owl-box
-	max-width: 540px
 	margin: 56px auto 36px
+	padding-left: 50px
+	padding-right: 50px
+	overflow: hidden
 	@media (max-width: 767.98px)
 		margin: 18px auto
-		max-width: 320px
+	@media (max-width: 575.98px)
+		padding-left: 30px
+		padding-right: 30px
 
 .owl-1
 	&.owl-theme
 		.owl-stage-outer
+			overflow: visible
 			padding: 10px 0 50px
 			.owl-item
 				.slide
 					padding: 15px 25px 12px
-					width: 250px
+					margin-left: -50px
+					margin-right: -50px
 					transition: $transition
 					img 
 						width: 150px
 						margin: 0 auto
-					@media (max-width: 767.98px)
-						width: 150px
+					@media (max-width: 575.98px)
 						padding: 15px 10px 12px
+						margin-left: -30px
+						margin-right: -30px
 						.fz-18
 							font-size: 13px !important
 						img 
@@ -1006,25 +1013,13 @@ ul
 						&:hover
 							div 
 								opacity: 1
-					&.active
-						.slide
-							position: absolute
-							top: 0
-							left: 0
 				&:not(.active)
 					.slide
 						opacity: 0
 				&.center
 					z-index: 1
 					.slide
-						position: absolute
-						top: 40px
-						left: 50%
-						transform: translateX(-50%)
-					~ .active
-						.slide
-							left: auto
-							right: 0
+						transform: translateY(40px)
 
 // LANDING PAGE
 
