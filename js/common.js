@@ -14,6 +14,7 @@ $(function() {
     items: 3,
     loop: true,
     margin: 0,
+    smartSpeed: 500,
     dots: false,
     responsive: {
       0: {
