@@ -9,28 +9,45 @@ $(function() {
   Waves.attach('.btn',  ['waves-light']);
   Waves.init();
 
-  $('.owl-1').owlCarousel({
+  var owl = $('.owl-1').owlCarousel({
     center: true,
     items: 3,
     loop: true,
     margin: 0,
     smartSpeed: 500,
+    mouseDrag: false,
+    touchDrag: false,
     dots: false,
-    responsive: {
-      0: {
-        mouseDrag : true,
-      },
-      1200: {
-        mouseDrag : false,
-      },
-    },
   });
 
+  windowResp();
+  $(window).resize(function() {
+    windowResp();
+  });
+
+  function windowResp() {
+    if ($(window).width() < 1200)
+      owlDrag();
+  };
+
+  function owlDrag() {
+    jquerySwipeHandler.handleSwipe(".owl-box", [
+      jquerySwipeHandler.SWIPE_LEFT, jquerySwipeHandler.SWIPE_RIGHT
+    ], function (direction) {
+      console.log("swipe2: ", direction);
+      if (direction === 'SWIPE_LEFT')
+        owl.trigger('next.owl.carousel');
+      else if  (direction === 'SWIPE_RIGHT')
+        owl.trigger('prev.owl.carousel');
+    });
+  };
+
   $(document).on('click', '.owl-item', function() {
-  owlIndex = $(this).index();
-  count = document.querySelectorAll(".owl-item.active").length;
-  $('.owl-stage-outer').trigger('to.owl.carousel', owlIndex - count);
-});
+    owlIndex = $(this).index();
+    console.log('checking');
+    count = document.querySelectorAll(".owl-item.active").length;
+    $('.owl-stage-outer').trigger('to.owl.carousel', owlIndex - count);
+  });
 
   var popupTimer;
   function delayPopup(popup) {
