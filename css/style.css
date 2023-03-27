@@ -1038,8 +1038,10 @@ ul {
       opacity: 0.5; }
     .owl-1.owl-theme .owl-stage-outer .owl-item:not(.center) .slide:hover div {
       opacity: 1; }
-  .owl-1.owl-theme .owl-stage-outer .owl-item:not(.active) .slide {
-    opacity: 0; }
+  .owl-1.owl-theme .owl-stage-outer .owl-item:not(.active) {
+    pointer-events: none; }
+    .owl-1.owl-theme .owl-stage-outer .owl-item:not(.active) .slide {
+      opacity: 0; }
   .owl-1.owl-theme .owl-stage-outer .owl-item.center {
     z-index: 1; }
     .owl-1.owl-theme .owl-stage-outer .owl-item.center .slide {
